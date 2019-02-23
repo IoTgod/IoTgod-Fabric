@@ -1,0 +1,14 @@
+2019/01/20 17:33:50 [1;34m[I] [service.go:130] frps tcp listen on 0.0.0.0:7777[0m
+2019/01/20 17:33:50 [1;34m[I] [root.go:207] Start frps success[0m
+2019/01/20 20:29:50 [1;34m[I] [service.go:130] frps tcp listen on 0.0.0.0:7778[0m
+2019/01/20 20:29:50 [1;34m[I] [root.go:207] Start frps success[0m
+2019/01/20 20:29:50 [1;34m[I] [service.go:130] frps tcp listen on 0.0.0.0:7777[0m
+2019/01/20 20:29:50 [1;34m[I] [root.go:207] Start frps success[0m
+2019/01/20 21:50:55 [1;34m[I] [service.go:130] frps tcp listen on 0.0.0.0:7777[0m
+2019/01/20 21:50:55 [1;34m[I] [service.go:172] http service listen on 0.0.0.0:8080[0m
+2019/01/20 21:50:55 [1;34m[I] [root.go:207] Start frps success[0m
+2019/01/20 21:51:11 [1;34m[I] [service.go:319] client login info: ip [111.17.26.211:8188] version [0.21.0] hostname [] os [linux] arch [amd64][0m
+2019/01/20 21:51:11 [1;34m[I] [proxy.go:217] [613e24ed8d0b1124] [ssh] tcp proxy listen port [2222][0m
+2019/01/20 21:51:11 [1;34m[I] [control.go:335] [613e24ed8d0b1124] new proxy [ssh] success[0m
+2019/01/20 21:51:11 [1;34m[I] [proxy.go:273] [613e24ed8d0b1124] [web1] http proxy listen for host [cloud.home.yimian.xyz] location [][0m
+2019/01/20 21:51:11 [1;34m[I] [control.go:335] [613e24ed8d0b1124] new proxy [web1] success[0m
