@@ -1,0 +1,80 @@
+/*Modifi-css for handsome 4.4.x*/
+/*all*/
+.no-margin {
+	margin: 0!important
+}
+/*scrollbar*/
+*::-webkit-scrollbar {
+	width: 8px!important;
+	height: 8px!important
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: #999!important
+}
+
+*::-webkit-scrollbar-track-piece {
+	background: #eee!important
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #777!important
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background-color: #555!important
+}
+/*app&toc*/
+
+
+
+aside.col.w-md.no-border-xs {
+	transition: all .3s
+}
+
+.visible-xs-inline {
+	display: inline-block!important
+}
+
+@media screen and (min-width:768px) and (max-width:1140px) {
+	.visible-xs-inline {
+		display: none!important
+	}
+}
+
+.tocify-item {
+	background-color: rgba(255,255,255,.8)
+}
+
+.tocify-item.active {
+	color: #7266ba;
+	font-weight: 700
+}/*kotori*/#kotori {
+	position: absolute;
+	left: -15px;
+	bottom: -15px;
+	max-height: 110px;
+	transition: all .3s
+}
+
+#kotori:hover {
+	left: 0;
+	bottom: 0
+}
+
+#kotori.hidekotori {
+	left: -110px;
+	bottom: -110px
+}
+
+@media screen and (max-width:767px) {
+	#kotori {
+		display: none
+	}
+
+	.blog-post>.panel:hover .index-post-img .item-thumb {
+		transform: none!important
+	}
+}
+
