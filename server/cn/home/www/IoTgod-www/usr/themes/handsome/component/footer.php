@@ -146,7 +146,6 @@
     </script>
 
 
-
 <!--CDN加载-->
 <?php $PUBLIC_CDN_ARRAY = unserialize(PUBLIC_CDN); ?>
 <script src="<?php echo $PUBLIC_CDN_ARRAY['js']['bootstrap'] ?>"></script>

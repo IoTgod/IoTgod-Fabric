@@ -1,0 +1,6 @@
+
+/* 修改文章右侧目录字体颜色*/
+.tocify-item.active {
+	color: #7266ba;
+	font-weight: 700
+}

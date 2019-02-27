@@ -57,7 +57,6 @@ if (strtoupper(Handsome_Config::HANDSOME_DEBUG_DISPLAY) == 'ON'){
     <link rel="stylesheet" href="<?php echo STATIC_PATH; ?>css/handsome.min.css?v=<?php echo Handsome::$version.Handsome::$versionTag ?>" type="text/css" />
 
 
-
     <!--主题组件css文件加载-->
     <link rel="stylesheet" href="<?php echo STATIC_PATH; ?>css/features/jquery.fancybox.min.css?v=<?php echo Handsome::$version.Handsome::$versionTag ?>" type="text/css" />
     <?php if ($this->options->codeStyle!=""){
