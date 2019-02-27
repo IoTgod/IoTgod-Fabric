@@ -59,6 +59,16 @@
                     <div class="progress-bar bg-white" data-toggle="tooltip" data-original-title="<?php _me("时间已经度过"); echo $percent; ?>" style="width: <?php echo $percent; ?>"></div>
                   </div>
                 </li>
+                <li>
+                <a href="<?php $this->options->feedUrl(); ?>" data-toggle="tooltip" title="" data-original-title="订阅文章 Feed 源">
+                  <i style="position: relative;width: 30px;margin: -11px -10px;margin-right: 0px;overflow: hidden;line-height: 30px;text-align: center;" class="fontello fontello-rss"></i><span>文章RSS</span>
+                </a>
+              </li>
+                <li>
+                <a href="<?php $this->options->commentsFeedUrl(); ?>" data-toggle="tooltip" title="" data-original-title="订阅评论 Feed 源">
+                  <i style="position: relative;width: 30px;margin: -11px -10px;margin-right: 0px;overflow: hidden;line-height: 30px;text-align: center;" class="fontello fontello-rss-square"></i><span>评论RSS</span>
+                </a>
+              </li>
               </ul>
               <!-- / dropdown -->
             </div>
@@ -189,35 +199,35 @@ data-placement=\"top\"><a href=\"{url}\" target=\"_blank\"><span>{name}</span></
           <!-- nav -->
         </div>
           <!--end of .navi-wrap-->
-          <!--left_footer-->
+          <!--left_footer--><!--
           <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
-                  <?php if (@in_array('hideLogin',$this->options->featuresetup)){
-                      $class = "col-xs-6";
-                  }else{
-                      $class = "col-xs-4";
-                  }; ?>
+                  <?php //if (@in_array('hideLogin',$this->options->featuresetup)){
+                      //$class = "col-xs-6";
+                 // }else{
+                    // $class = "col-xs-4";
+                 // }; ?>
 
-                  <?php if (!@in_array('hideLogin',$this->options->featuresetup)): ?>
-                      <div class="<?php echo $class; ?> footer-stats">
-                          <a target="_blank" class="tinav" href="<?php $this->options->adminUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理">
+                  <?php //if (!@in_array('hideLogin',$this->options->featuresetup)): ?>
+                      <div class="<?php// echo $class; ?> footer-stats">
+                          <a target="_blank" class="tinav" href="<?php //$this->options->adminUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="后台管理">
                               <span class="block"><i class="fontello fontello-cogs"></i></span>
-                              <small class="text-muted"><?php _me("管理") ?></small>
+                              <small class="text-muted"><?//php _me("管理") ?></small>
                           </a>
                       </div>
-                  <?php endif; ?>
-                  <div class="<?php echo $class; ?> footer-stats">
-                      <a target="_blank" class="tinav" href="<?php $this->options->feedUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
+                  <?php //endif; ?>
+                  <div class="<?php// echo $class; ?> footer-stats">
+                      <a target="_blank" class="tinav" href="<?php// $this->options->feedUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
                           <span class="block"><i class="fontello fontello-rss"></i></span>
-                          <small class="text-muted"><?php _me("文章") ?></small>
+                          <small class="text-muted"><?php// _me("文章") ?></small>
                       </a>
                   </div>
-                  <div class="<?php echo $class; ?> footer-stats">
-                      <a target="_blank" href="<?php $this->options->commentsFeedUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+                  <div class="<?php //echo $class; ?> footer-stats">
+                      <a target="_blank" href="<?php// $this->options->commentsFeedUrl(); ?>" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
                           <span class="block"><i class="fontello fontello-rss-square"></i></span>
-                          <small class="text-muted"><?php _me("评论") ?></small>
+                          <small class="text-muted"><?php// _me("评论") ?></small>
                       </a>
                   </div>
-          </div>
+          </div>-->
 
       </div><!--.aside-wrap-->
   </aside>
