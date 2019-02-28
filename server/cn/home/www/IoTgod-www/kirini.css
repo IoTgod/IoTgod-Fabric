@@ -303,7 +303,7 @@
 }
 #post-content .highlight {
 	margin-bottom:16px
-}
+}/*
 #post-content .highlight pre,#post-content pre {
 	padding:16px;
 	overflow-y:hidden;
@@ -315,12 +315,12 @@
 #post-content .highlight pre {
 	margin-bottom:0;
 	word-break:normal
-}
+}*/
 #post-content pre code{
 	display:block;
 	max-width:initial;
 	padding:0px;
-	margin: 0px 0px 0px 40px;
+	margin: 10px 0px 0px 40px;
 	overflow:auto;
 	line-height:inherit;
 	word-wrap:normal;
