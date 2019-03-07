@@ -1,0 +1,27 @@
+
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="page-header">Yimian Video</h1>  
+                        <p class="lead">Share video with the one you love!</p>
+                       
+                        <h3><a href="./acg.php?class=1">ACG (动漫）</a></h3>
+                        
+                        <h3><a href="./acg.php?class=2">Movies (电影)</a></h3>
+						
+                        <h3><a href="./acg.php?class=3">Documentary (纪录片)</a></h3>
+						
+						<h3><a href="./acg.php?class=4">TV Play (电视剧)</a></h3>
+						
+						<h3 id="p1"></h3>
+                    </div>
+                </div>
+
+<script>
+var watching=0;
+$.post("./fpcheck.php",{
+	fp: fp
+},
+function(msg){
+	if(msg.code==1){document.getElementById("p1").innerHTML='<a href="#" onclick="window.location.href=\'./video.php\'">点这里继续上次播放！</a>';}
+},"json");
+</script>
