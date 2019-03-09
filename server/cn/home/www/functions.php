@@ -118,7 +118,7 @@ function js__cleverLogin()
 function yimian__heartbeat()
 {
 	echo "
-<script>$.post(\"https://log.yimian.xyz/heartbeat.php\",{\"ip\":ip,\"fp\":fp,\"city\":ipCity})</script>";
+<script>$.post(\"https://log.yimian.xyz/heartbeat.php\",{\"ip\":ip,\"fp\":fp,\"city\":ipCity});cookie.set('fp',fp);</script>";
 }
 
 
