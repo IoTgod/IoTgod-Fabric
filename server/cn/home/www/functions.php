@@ -35,7 +35,7 @@ function yimian__header($title="Yimian",$keywords="yimian",$description="Yimian 
 	echo "<head>
 	<meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">
-	<link rel=\"icon\" href=\"https://cdn.yimian.ac.cn/img/logo/logo.ico\" type=\"image/x-icon\"/>
+	<link rel=\"icon\" href=\"https://cdn.yimian.xyz/img/logo/logo.ico\" type=\"image/x-icon\"/>
 	<title>".$title."</title>
     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\"/>
    	<meta name=\"Keywords\" content=\"".$keywords."\">
@@ -66,16 +66,16 @@ function js__device()
 function css__cleverLogin()
 {
 	echo "
-<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.ac.cn/clever-login/clever-login_base.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.ac.cn/clever-login/clever-login_icon.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.ac.cn/clever-login/clever-login_normal.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.ac.cn/clever-login/clever-login_reg.css\" />";
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.xyz/clever-login/clever-login_base.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.xyz/clever-login/clever-login_icon.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.xyz/clever-login/clever-login_normal.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.xyz/clever-login/clever-login_reg.css\" />";
 }
 
 function css__easyVer()
 {
 	echo "
-<link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.yimian.ac.cn/easyVer/easyVer.min.css\">";
+<link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.yimian.xyz/easyVer/easyVer.min.css\">";
 }
 
 //mark the end of the html header
@@ -90,10 +90,10 @@ if($GLOBALS['jquery']==1)
 echo "console.log('\\n' + ' %c jQuery v3.3.1 %c https://jquery.com '+ '\\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');console.log('\\n' + ' %c jquery-pjax v2.0.1 %c https://github.com/defunkt/jquery-pjax ' + '\\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');";
 	
 echo "</script>
-<script src=\"https://cdn.yimian.ac.cn/cookie/cookie.js\"></script>
+<script src=\"https://cdn.yimian.xyz/cookie/cookie.js\"></script>
 <script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>
 <script type=\"text/javascript\">ip=returnCitySN.cip;ipCity=returnCitySN.cname;</script>
-<script src=\"https://cdn.yimian.ac.cn/fp/fp.js\"></script>
+<script src=\"https://cdn.yimian.xyz/fp/fp.js\"></script>
 </head>
 	
 <body>";
@@ -102,15 +102,15 @@ echo "</script>
 function js__easyVer()
 {
 	echo "
-<script type=\"text/javascript\" src=\"https://cdn.yimian.ac.cn/easyVer/easyVer.min.js\"></script>";
+<script type=\"text/javascript\" src=\"https://cdn.yimian.xyz/easyVer/easyVer.min.js\"></script>";
 }
 
 function js__cleverLogin()
 {
 	echo "
-<script type=\"text/javascript\" src=\"https://cdn.yimian.ac.cn/clever-login/polygonizr.min.js\"></script>
+<script type=\"text/javascript\" src=\"https://cdn.yimian.xyz/clever-login/polygonizr.min.js\"></script>
 <script type=\"text/javascript\">$('#site-landing').polygonizr();</script>
-<script type=\"text/javascript\" src=\"https://cdn.yimian.ac.cn/clever-login/clever-login.min.js\"></script>";
+<script type=\"text/javascript\" src=\"https://cdn.yimian.xyz/clever-login/clever-login.min.js\"></script>";
 	js__easyVer();
 }
 
@@ -118,7 +118,7 @@ function js__cleverLogin()
 function yimian__heartbeat()
 {
 	echo "
-<script>$.post(\"https://cn.yimian.xyz/heartbeat.php\",{\"ip\":ip,\"fp\":fp,\"city\":ipCity})</script>";
+<script>$.post(\"https://log.yimian.xyz/heartbeat.php\",{\"ip\":ip,\"fp\":fp,\"city\":ipCity})</script>";
 }
 
 
@@ -139,7 +139,7 @@ function yimian__footer($wordColor="#C7C7C7",$backgroundColor="#2B2B2B",$urlColo
 {
 	echo "	<style>/*footer theme*/footer{padding:1.5rem 1rem;color:".$wordColor.";font-size:1.2rem;line-height:1.4;text-align:center;background:".$backgroundColor.";border-top:1px solid #C7C7C7}a.footera:link{color: ".$urlColor." ; text-decoration:none;}a.footera:visited {color:#79CDCD}</style>
 	<script>function openwin(){window.open(\"https://iotcat.me\");}</script>
-	<footer class=\"footer\">Copyright © 2018 - ".date("Y").".<a class=\"footera\" onclick=\"openwin()\" href=\"#\">IoTcat</a> All rights reserved.</footer>";
+	<footer class=\"footer\">© 2018-".date("Y")." Copyright <a class=\"footera\" onclick=\"openwin()\" href=\"#\">IoTcat</a> </footer>";
 	yimian__heartbeat();
 	echo "</body>
 </html>";
