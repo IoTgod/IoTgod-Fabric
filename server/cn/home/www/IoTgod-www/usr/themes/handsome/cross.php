@@ -24,7 +24,7 @@ function getBigMemory(){
   	<main class="app-content-body <?php  Content::returnPageAnimateClass($this); ?>">
         <div class="hbox hbox-auto-xs hbox-auto-sm">
             <div class="col center-part">
-                <div style="background:url(<?php $this->options->timepic(); ?>) center center; background-size:cover">
+                <div style="background:url(<?php $this->options->timepic(); ?>) center top; background-size:cover">
                     <div class="wrapper-lg bg-white-opacity">
                         <div class="row m-t">
                             <div class="col-sm-7">
