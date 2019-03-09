@@ -139,7 +139,7 @@ function yimian__footer($wordColor="#C7C7C7",$backgroundColor="#2B2B2B",$urlColo
 {
 	echo "	<style>/*footer theme*/footer{padding:1.5rem 1rem;color:".$wordColor.";font-size:1.2rem;line-height:1.4;text-align:center;background:".$backgroundColor.";border-top:1px solid #C7C7C7}a.footera:link{color: ".$urlColor." ; text-decoration:none;}a.footera:visited {color:#79CDCD}</style>
 	<script>function openwin(){window.open(\"https://iotcat.me\");}</script>
-	<footer class=\"footer\">Copyright © 2019.<a class=\"footera\" onclick=\"openwin()\" href=\"#\">IoTcat</a> All rights reserved.</footer>";
+	<footer class=\"footer\">Copyright © 2018 - ".date("Y").".<a class=\"footera\" onclick=\"openwin()\" href=\"#\">IoTcat</a> All rights reserved.</footer>";
 	yimian__heartbeat();
 	echo "</body>
 </html>";
@@ -472,13 +472,13 @@ function dplayer__setup_once($id)
 	echo "<script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>
 <script src=\"https://cdn.bootcss.com/hls.js/0.10.1/hls.min.js\"></script>
 ";
-	echo "<link rel=\"stylesheet\" href=\"https://cn.yimian.xyz/etc/dplayer/DPlayer.min.css\">
-<script src=\"https://cn.yimian.xyz/etc/dplayer/DPlayer.min.js\"></script>";
+	echo "<link rel=\"stylesheet\" href=\"https://cdn.yimian.xyz/dplayer/DPlayer.min.css\">
+<script src=\"https://cdn.yimian.xyz/dplayer/DPlayer.min.js\"></script>";
 	echo "<script type=\"text/javascript\">//script for set up the dplayer
 //global var for storing current video info
 var g_vId=$id;
 </script>
-<script src=\"/etc/dplayer/setup_once.js\"></script>
+<script src=\"https://cdn.yimian.xyz/dplayer/setup_once.js\"></script>
 ";
 echo "<script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>";
 }
@@ -535,13 +535,13 @@ function video__bodyUp()
 		yimian__header("Yimian Video","video,Yimian","This is the page for showing video class.");
 
 		echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">
-<link rel=\"stylesheet\" href=\"https://cn.yimian.xyz/video/css/style.css\">";
+<link rel=\"stylesheet\" href=\"https://cdn.yimian.xyz/video/css/style.css\">";
 		
 
 		yimian__headerEnd();
 
 
-		echo file_get_contents("https://cn.yimian.xyz/video/body_up.html");
+		echo file_get_contents("https://video.yimian.xyz/body_up.html");
 	}
 }
 
@@ -550,7 +550,7 @@ function video__bodyDown()
 {
 	if(!isset($_REQUEST['_pjax'])) 
 	{
-		echo file_get_contents("https://cn.yimian.xyz/video/body_down.html");
+		echo file_get_contents("https://video.yimian.xyz/body_down.html");
 		yimian__simpleFooter();
 	}
 }
