@@ -18,10 +18,10 @@
 
 <script>
 var watching=0;
-$.post("./fpcheck.php",{
+$.post("https://api.yimian.xyz/video/fpcheck.php",{
 	fp: fp
 },
 function(msg){
-	if(msg.code==1){document.getElementById("p1").innerHTML='<a href="#" onclick="window.location.href=\'./video.php\'">点这里继续上次播放！</a>';}
+	if(msg.code==1){document.getElementById("p1").innerHTML='<a href="#" onclick="window.location.href=\'https://www.acg.watch/video.php\'">点这里继续上次播放！</a>';}
 },"json");
 </script>

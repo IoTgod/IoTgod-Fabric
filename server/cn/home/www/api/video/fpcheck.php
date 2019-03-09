@@ -1,6 +1,8 @@
 <?php
 include '../../functions.php';
 
+header('Access-Control-Allow-Origin:*');
+
 $fp=$_REQUEST['fp'];
 
 $res=db__getData(db__connect(),"fp","fp",$fp);

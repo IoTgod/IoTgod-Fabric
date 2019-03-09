@@ -18,7 +18,7 @@ $msg1=$_REQUEST['msg1'];
 $msg2=$_REQUEST['msg2'];
 $msg3=$_REQUEST['msg3'];
 
-if($msg3==15){$msg3=substr(microtime(),-6);}
+if($msg3==15){$msg3=mt_rand(0,9).mt_rand(0,9).mt_rand(0,9).mt_rand(0,9).mt_rand(0,9).mt_rand(0,9);}
 
 
 
