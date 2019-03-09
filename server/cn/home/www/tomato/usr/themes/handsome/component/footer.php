@@ -5,7 +5,7 @@
     <div class="wrapper b-t bg-light">
       <span class="pull-right hidden-xs">
       <?php $this->options->BottomInfo(); ?>
-      Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="https://www.ihewro.com">handsome</a>&nbsp;|&nbsp;Developed by <a target="blank" href="https://iotgod.net">IoTgod</a>
+      Powered by <a target="blank" href="http://www.typecho.org">Typecho</a>&nbsp;|&nbsp;Theme by <a target="blank" href="https://www.ihewro.com">handsome</a>&nbsp;|&nbsp;Developed by <a target="blank" href="https://iotcat.me">IoTcat</a>
       </span>
 		&copy;&nbsp;2018-<?php echo date("Y");?>&nbsp;Copyright&nbsp;<a href="https://tomatotrees.xyz">TOMATOtreess</a>&nbsp;|&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank"></a></a><?php $this->options->BottomleftInfo(); ?>
     </div>
