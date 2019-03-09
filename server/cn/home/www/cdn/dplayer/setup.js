@@ -18,11 +18,11 @@ const dp = new DPlayer({
     lang: 'zh-cn',
     hotkey: true,
     preload: 'auto',
-    logo: 'https://cn.yimian.xyz/etc/img/logo/logo_white.png',
+    logo: 'https://cdn.yimian.xyz/img/logo/logo_white.png',
     volume: 0.7,
     mutex: true,
     video: {
-        url: 'https://cn.yimian.xyz/video/404.mp4'
+        url: 'https://video.yimian.xyz/404.mp4'
     },
     danmaku: {
         id: 'null',
@@ -45,7 +45,7 @@ dp.on('error',function dpError(){
 	if(err<8)
 	{
 		var sk=dp.video.currentTime;
-		newVideo_detail(g_vId,'https://cn.yimian.xyz/video/video_address.php?fp='+fp+'&id='+g_vId,1,sk+2,null,1);
+		newVideo_detail(g_vId,'https://video.yimian.xyz/video_address.php?fp='+fp+'&id='+g_vId,1,sk+2,null,1);
 		//alert(dp.video.currentTime);
 		err++;
 	}
@@ -88,7 +88,7 @@ function newVideo(id,next,seek)
 {
 	$.ajax({
        	type: "POST",
-        url: '/etc/api/video.php',
+        url: 'https://api.yimian.xyz/video/video.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',
@@ -108,11 +108,11 @@ function newVideo(id,next,seek)
 			
 			if(!seek){seek=cookie.get('vTime_'+g_vId)}
 			
-			newVideo_detail(msg.id,'https://cn.yimian.xyz/video/video_address.php?fp='+fp+'&id='+msg.id,next,seek,msg.aid);
+			newVideo_detail(msg.id,'https://video.yimian.xyz/video_address.php?fp='+fp+'&id='+msg.id,next,seek,msg.aid);
 			cookie.set('vWatching',g_vId);
 			//record video for usr
 			timeUpdate_count=0;
-			$.post("/etc/api/video_fp.php",{"fp":fp,"id":g_vId,"seek":0,"ip":returnCitySN.cip});
+			$.post("https://api.yimian.xyz/video/video_fp.php",{"fp":fp,"id":g_vId,"seek":0,"ip":returnCitySN.cip});
 		},
         error: function (data,type, err) {
            alert('Can not Get Video!');
@@ -127,7 +127,7 @@ function nextVideo()
 	
 	$.ajax({
        	type: "POST",
-        url: '/etc/api/video_redirect.php',
+        url: 'https://api.yimian.xyz/video/video_redirect.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',
@@ -146,7 +146,7 @@ function videotoUrl(id)
 {
 		$.ajax({
        	type: "POST",
-        url: '/etc/api/video_toUrl.php',
+        url: 'https://api.yimian.xyz/video/video_toUrl.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',

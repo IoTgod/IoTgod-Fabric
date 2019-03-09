@@ -457,9 +457,9 @@ function dplayer__setup()
 {
 	echo "<script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>
 ";
-	echo "<link rel=\"stylesheet\" href=\"https://cn.yimian.xyz/etc/dplayer/DPlayer.min.css\">
-<script src=\"https://cn.yimian.xyz/etc/dplayer/DPlayer.min.js\"></script>";
-	echo "<script type=\"text/javascript\" src=\"/etc/dplayer/setup.js\"></script>
+	echo "<link rel=\"stylesheet\" href=\"https://cdn.yimian.xyz/dplayer/DPlayer.min.css\">
+<script src=\"https://cdn.yimian.xyz/dplayer/DPlayer.min.js\"></script>";
+	echo "<script type=\"text/javascript\" src=\"https://cdn.yimian.xyz/dplayer/setup.js\"></script>
 ";
 echo "<script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>";
 }

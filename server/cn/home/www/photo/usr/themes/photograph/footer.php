@@ -14,7 +14,7 @@
 	<p class="related"><?php echo $hotKeysDesc; ?></p>
 	<?php endif; ?>
 	<?php if ($this->options->poweredby == 'y'): ?>
-	<p class="related">POWERED BY <a href="http://typecho.org/" target="_blank">TYPECHO</a> / THEME BY <a href="https://photo.siitake.cn/photograph.html" target="_blank">SIITAKE</a> / DEVELOPED BY <a href="https://iotgod.net" target="_blank">IoTgod</a></p>
+	<p class="related">POWERED BY <a href="http://typecho.org/" target="_blank">TYPECHO</a> / THEME BY <a href="https://photo.siitake.cn/photograph.html" target="_blank">SIITAKE</a> / DEVELOPED BY <a href="https://iotcat.me" target="_blank">IoTcat</a></p>
 	<?php endif; ?>
 	<?php if ($this->options->statCount == 'y'): $stat = statCount(); ?>
 	<p class="related">本站共<?php echo $stat['pic'] ?>张图片在<?php echo $stat['post'] ?>个相册中，他们被分成<?php echo $stat['cate'] ?>个类别<!--，并有<?php //echo $stat['page'] ?>个页面和<?php// echo $stat['comm'] ?>条评论--></p>

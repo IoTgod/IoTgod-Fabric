@@ -2,6 +2,8 @@
 
 include '../../functions.php';
 
+header('Access-Control-Allow-Origin:*');
+
 $id= $_REQUEST[id];
 $fp= $_REQUEST[fp];
 $seek= $_REQUEST[seek];

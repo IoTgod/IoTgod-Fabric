@@ -2,6 +2,8 @@
 
 include '../../functions.php';
 
+header('Access-Control-Allow-Origin:*');
+
 $vcode= $_REQUEST[vcode];
 $ip= $_REQUEST[ip];
 
