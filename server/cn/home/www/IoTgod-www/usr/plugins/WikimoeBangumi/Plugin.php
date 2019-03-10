@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin:*');
+
+
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /**
  * Bangumi追番表

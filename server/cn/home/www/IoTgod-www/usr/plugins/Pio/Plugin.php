@@ -123,6 +123,8 @@ class Pio_Plugin implements Typecho_Plugin_Interface{
         echo("<link href='" . Helper::options() -> pluginUrl . "/Pio/static/pio.css' rel='stylesheet' type='text/css'/>\n");
     }
     public static function footer(){
+        //随机展示
+        if(mt_rand(0,3) != 0) return ;
         // 生成画布
         function getCanvas(){
             $height = Typecho_Widget::widget('Widget_Options') -> Plugin('Pio') -> custom_height;
@@ -176,6 +178,7 @@ class Pio_Plugin implements Typecho_Plugin_Interface{
 
         // 生成载入器
         function getLoader(){
+
             $plugin = Typecho_Widget::widget('Widget_Options') -> Plugin('Pio');
 
             $config = array(

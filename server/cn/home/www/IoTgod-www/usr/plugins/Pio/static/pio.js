@@ -140,7 +140,7 @@ var Paul_Pio = function (prop) {
             }
             else{
                 current.canvas.onclick = function () {
-                    modules.render(["你在干什么？", "再摸我就报警了！", "啊好舒服喔~", "你够了喔！"]);
+                    modules.render(["你在干什么？", "再摸我就报警了！⌇●﹏●⌇", "啊好舒服喔~", "你够了喔！","你只有四分之一的几率会遇到我哦~","鼠…鼠标放错地方了~"]);
                 }
             }
         },
