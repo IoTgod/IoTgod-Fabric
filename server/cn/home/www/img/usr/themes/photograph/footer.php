@@ -218,4 +218,8 @@
 </script>
 <?php $this->footer(); ?>
 </body>
+
+<script src="https://cdn.yimian.xyz/heartbeat/heartbeat_footer.min.js"></script>
+
+
 </html>
