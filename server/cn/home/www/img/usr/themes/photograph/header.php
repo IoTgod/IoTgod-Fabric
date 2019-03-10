@@ -39,7 +39,7 @@
     		$this->header();
     	}
     ?>
-
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
 console.log('\n' + ' %c Yimian  %c https://www.yimian.xyz ' + '\n', 'color: #00FFFF; background: #030307; padding:5px 0;', 'background: #4682B4; padding:5px 0;');
