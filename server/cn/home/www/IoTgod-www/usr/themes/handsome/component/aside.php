@@ -120,10 +120,59 @@
               <?php endif; ?>
               <?php echo @$asideItemsOutput ?>
                 <?php if (@!in_array('component',$this->options->asideSetting)): ?>
+              <!--呀！-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                  <i class="fontello fontello-emo-tongue"></i>
+                  <span>呀！</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a>
+                      <span>呀！</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.acg.watch" class="auto" target="_blank">ACG.WATCH</a>
+                  </li>
+                  <li>
+                    <a href="https://ovo.re" class="auto" target="_blank">OvO.re</a>
+                  </li>
+                </ul>
+              </li>
+
               <li class="line dk"></li>
 			<!--Components-->
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                 <span><?php _me("组成") ?></span>
+              </li>
+              <!--随心小项目-->
+              <li>
+                <a class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fontello icon-fw fontello-angle-right text"></i>
+                    <i class="fontello icon-fw fontello-angle-down text-active"></i>
+                  </span>
+                  <i class="fontello fontello-emo-sunglasses"></i>
+                  <span>随心小项目</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a>
+                      <span>随心小项目</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/iotcat/wIoT" class="auto" target="_blank">wIoT - 物联端管框架</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/eeeNeko/ovo" class="auto" target="_blank">ovo.h - aws的C++框架</a>
+                  </li>
+                </ul>
               </li>
               <!--分类category-->
               <li>
