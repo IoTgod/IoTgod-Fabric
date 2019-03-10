@@ -5,4 +5,10 @@ header("Access-Control-Allow-Origin: *");
 
 $fp=$_REQUEST['fp'];
 
-echo json_encode(array("t1"=>"11","t2"=>"ee","t"=>time()));
+$res = db__getData(db__connect(),"fp_cookie","fp",$fp);
+
+$arr = array();
+
+$cookie = $res[0]['cookie'];
+
+echo json_encode(array("cookie" => $cookie, "t" => time()));

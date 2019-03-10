@@ -5,13 +5,18 @@ header("Access-Control-Allow-Origin: *");
 
 $fp=$_REQUEST['fp'];
 $ip=$_REQUEST['ip'];
+$cookie=$_REQUEST['cookie'];
 $city=$_REQUEST['city'];
 $from=$_SERVER['HTTP_REFERER'];
 $domain=$_SERVER['HTTP_HOST'];
 
 $conn=db__connect();
 
-db__delData($conn,"fp_cookie","fp",$fp);
+if(isset($_REQUEST['cookie'])){
+	db__delData($conn,"fp_cookie","fp",$fp);
+	db__pushData($conn,"fp_cookie",array("fp" => $fp, "cookie" => $cookie));
+}else{
+
 
 session_start();
 
@@ -37,7 +42,8 @@ if(!isset($_SESSION['s_usrTel']))
 		db__pushData($conn,"fp",array("fp"=>$fp,"ip"=>$ip));
 }
 
-db__pushData($conn,"log",array("city"=>$city,"fp"=>$fp,"ip"=>$ip,"domain"=>$domain,"url"=>$from,"time"=>time()));
+ 	db__pushData($conn,"log",array("city"=>$city,"fp"=>$fp,"ip"=>$ip,"domain"=>$domain,"url"=>$from,"time"=>time()));
 
 //echo json_encode(array("fp"=>$fp,"ip"=>$ip,"domain"=>$domain,"url"=>$from,"time"=>time()));
-echo json_encode(array("usr"=>$_SESSION['s_usr'],"tel"=>$_SESSION['s_tel'],"fp"=>$_SESSION['s_fp'],"ip"=>$_SESSION['s_ip']));
+	echo json_encode(array("usr"=>$_SESSION['s_usr'],"tel"=>$_SESSION['s_tel'],"fp"=>$_SESSION['s_fp'],"ip"=>$_SESSION['s_ip']));
+}

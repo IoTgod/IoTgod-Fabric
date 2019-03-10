@@ -94,6 +94,7 @@ echo "</script>
 <script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>
 <script type=\"text/javascript\">ip=returnCitySN.cip;ipCity=returnCitySN.cname;</script>
 <script src=\"https://cdn.yimian.xyz/fp/fp.js\"></script>
+<script src=\"https://cdn.yimian.xyz/heartbeat/heartbeat_head.min.js\"></script>
 </head>
 	
 <body>";
@@ -118,7 +119,7 @@ function js__cleverLogin()
 function yimian__heartbeat()
 {
 	echo "
-<script>$.post(\"https://log.yimian.xyz/heartbeat.php\",{\"ip\":ip,\"fp\":fp,\"city\":ipCity});cookie.set('fp',fp);</script>";
+<script src=\"https://cdn.yimian.xyz/heartbeat/heartbeat_footer.min.js\"></script>";
 }
 
 
