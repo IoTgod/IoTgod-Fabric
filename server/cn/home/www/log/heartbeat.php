@@ -11,11 +11,12 @@ $domain=$_SERVER['HTTP_HOST'];
 
 $conn=db__connect();
 
+db__delData($conn,"fp_cookie","fp",$fp);
+
 session_start();
 
 $_SESSION['s_fp']=$fp;
 $_SESSION['s_ip']=$ip;
-setcookie("fp", $fp, time()+3600*24*365*15);
 
 if(!isset($_SESSION['s_usrTel']))
 {

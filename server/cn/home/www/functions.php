@@ -315,6 +315,17 @@ function db__pushData($conn,$table,$content,$index="",$is_force=1)
 		db__insertData($conn,$table,$content);
 }
 
+
+function db__delData($conn, $table, $clmnName, $value)
+{
+	$value=db__antisql($value);
+	$clmnName=db__antisql($clmnName);
+
+	$sql = "DELETE FROM $table WHERE $clmnName = '$value'";
+	$conn->query($sql);
+}
+
+
 //anti sql
 function db__antisql($str)
 {
