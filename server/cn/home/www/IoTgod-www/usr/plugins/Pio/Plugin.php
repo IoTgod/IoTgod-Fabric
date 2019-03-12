@@ -120,7 +120,7 @@ class Pio_Plugin implements Typecho_Plugin_Interface{
 
     /* 插件实现方法 */
     public static function header(){
-        echo("<link href='" . Helper::options() -> pluginUrl . "/Pio/static/pio.css' rel='stylesheet' type='text/css'/>\n");
+        echo("<link href='https://cdn.yimian.xyz/model/pio/static/pio.css' rel='stylesheet' type='text/css'/>\n");
     }
     public static function footer(){
         //随机展示
@@ -228,8 +228,8 @@ class Pio_Plugin implements Typecho_Plugin_Interface{
             '<div class="pio-container{position}"><div class="pio-action"></div>{canvas}</div>'
         );
 
-        echo "<script src='" . Helper::options() -> pluginUrl . "/Pio/static/l2d.js'></script>" . "\n";
-        echo "<script src='" . Helper::options() -> pluginUrl . "/Pio/static/pio.js'></script>" . "\n";
+        echo "<script src='https://cdn.yimian.xyz/model/pio/static/l2d.js'></script>" . "\n";
+        echo "<script src='https://cdn.yimian.xyz/model/pio/static/pio.js'></script>" . "\n";
         echo $loader;
     }
 }

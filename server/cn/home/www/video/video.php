@@ -55,9 +55,20 @@ if(!isset($_REQUEST['id']))
 
 
 
-yimian__header("Yimian Video","video,Yimian","This is the page for playing a video.");
+yimian__header("ACG.WATCH","video,Yimian","This is the page for playing a video.");
 
 js__jquery();
+?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135901303-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135901303-2');
+</script>
+<?
 
 echo "<style>#dplayer{z-index: 999}</style>";
 

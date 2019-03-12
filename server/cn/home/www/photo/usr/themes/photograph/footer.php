@@ -14,6 +14,7 @@
 	<p class="related"><?php echo $hotKeysDesc; ?></p>
 	<?php endif; ?>
 	<?php if ($this->options->poweredby == 'y'): ?>
+	<p class="related"><a href="mailto:i@iotcat.me">侵删</a></p>
 	<p class="related">POWERED BY <a href="http://typecho.org/" target="_blank">TYPECHO</a> / THEME BY <a href="https://photo.siitake.cn/photograph.html" target="_blank">SIITAKE</a> / DEVELOPED BY <a href="https://iotcat.me" target="_blank">IoTcat</a></p>
 	<?php endif; ?>
 	<?php if ($this->options->statCount == 'y'): $stat = statCount(); ?>
@@ -217,4 +218,8 @@
 </script>
 <?php $this->footer(); ?>
 </body>
+
+<script src="https://cdn.yimian.xyz/heartbeat/heartbeat_footer.min.js"></script>
+
+
 </html>

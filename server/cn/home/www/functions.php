@@ -549,6 +549,15 @@ function video__bodyUp()
 		echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.yimian.xyz/bootstrap/bootstrap.min.css\">
 <link rel=\"stylesheet\" href=\"https://cdn.yimian.xyz/video/css/style.css\">";
 		
+		echo "<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-135901303-2\"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135901303-2');
+</script>";
 
 		yimian__headerEnd();
 
