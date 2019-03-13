@@ -34,7 +34,7 @@ const dp = new DPlayer({
 
 //lstn for recording play time to cookie
 var timeUpdate_count=0;
-dp.on('timeupdate',function dpTimeRecord(){if(g_vId!=234&&g_vId!=0)cookie.set('vTime_'+g_vId,dp.video.currentTime);if(timeUpdate_count++>15){ $.post("/etc/api/video_fp.php",{"fp":fp,"id":g_vId,"seek":dp.video.currentTime,"ip":returnCitySN.cip});timeUpdate_count=0;window.history.replaceState(null, null, "https://cn.yimian.xyz/video/video.php?id="+g_vId);}
+dp.on('timeupdate',function dpTimeRecord(){if(g_vId!=234&&g_vId!=0)cookie.set('vTime_'+g_vId,dp.video.currentTime);if(timeUpdate_count++>15){ $.post("https://video.api.yimian.xyz/video_fp.php",{"fp":fp,"id":g_vId,"seek":dp.video.currentTime,"ip":returnCitySN.cip});timeUpdate_count=0;window.history.replaceState(null, null, "https://cn.yimian.xyz/video/video.php?id="+g_vId);}
 	if(typeof attach==="function") attach();});
 
 //lstn for the video to the end
@@ -88,7 +88,7 @@ function newVideo(id,next,seek)
 {
 	$.ajax({
        	type: "POST",
-        url: 'https://api.yimian.xyz/video/video.php',
+        url: 'https://video.api.yimian.xyz/video.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',
@@ -112,7 +112,7 @@ function newVideo(id,next,seek)
 			cookie.set('vWatching',g_vId);
 			//record video for usr
 			timeUpdate_count=0;
-			$.post("https://api.yimian.xyz/video/video_fp.php",{"fp":fp,"id":g_vId,"seek":0,"ip":returnCitySN.cip});
+			$.post("https://video.api.yimian.xyz/video_fp.php",{"fp":fp,"id":g_vId,"seek":0,"ip":returnCitySN.cip});
 		},
         error: function (data,type, err) {
            alert('Can not Get Video!');
@@ -127,7 +127,7 @@ function nextVideo()
 	
 	$.ajax({
        	type: "POST",
-        url: 'https://api.yimian.xyz/video/video_redirect.php',
+        url: 'https://video.api.yimian.xyz/video_redirect.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',
@@ -146,7 +146,7 @@ function videotoUrl(id)
 {
 		$.ajax({
        	type: "POST",
-        url: 'https://api.yimian.xyz/video/video_toUrl.php',
+        url: 'https://video.api.yimian.xyz/video_toUrl.php',
         data: { "id": id},
         traditional: true,
         dataType: 'json',
