@@ -137,10 +137,10 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.acg.watch" class="auto" target="_blank">ACG.WATCH</a>
+                    <a href="https://www.acg.watch" class="auto" target="_self">ACG.WATCH</a>
                   </li>
                   <li>
-                    <a href="https://ovo.re" class="auto" target="_blank">OvO.re</a>
+                    <a href="https://ovo.re" class="auto" target="_self">OvO.re</a>
                   </li>
                   <li>
                     <a href="https://mikutap.yimian.xyz" class="auto">Mikutap享受创作之乐</a>

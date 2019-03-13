@@ -164,11 +164,11 @@ var Paul_Pio = function (prop) {
             elements.skin.onmouseover = function () {
                 prop.content.skin && prop.content.skin[0] ? modules.render(prop.content.skin[0]) : modules.render("想看看我的新衣服吗？");
             };
-            if(prop.model.length > 1) current.menu.appendChild(elements.skin);
+            if(prop.model.length > 0) current.menu.appendChild(elements.skin);
 
             // 关于我
             elements.info.onclick = function () {
-                prop.content.link ? window.open(prop.content.link) : window.open("https://video.yimian.xyz");
+                prop.content.link ? window.open(prop.content.link) : window.location.href= "https://video.yimian.xyz";
             };
             elements.info.onmouseover = function () {
                 modules.render("快来寻找我的踪影吧o(￣▽￣)ｄ");

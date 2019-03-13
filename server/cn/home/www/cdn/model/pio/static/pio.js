@@ -168,7 +168,7 @@ var Paul_Pio = function (prop) {
 
             // 关于我
             elements.info.onclick = function () {
-                prop.content.link ? window.open(prop.content.link) : window.open("https://video.yimian.xyz");
+                prop.content.link ? window.open(prop.content.link) : window.location.href= "https://video.yimian.xyz";
             };
             elements.info.onmouseover = function () {
                 modules.render("快来寻找我的踪影吧o(￣▽￣)ｄ");
