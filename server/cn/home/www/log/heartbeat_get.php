@@ -11,4 +11,4 @@ $arr = array();
 
 $cookie = $res[0]['cookie'];
 
-echo json_encode(array("cookie" => $cookie, "t" => time()));
+echo json_encode(array("cookie" => $cookie, "t" => time(), "tt" => $res[0]['timestamp']));

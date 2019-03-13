@@ -5,6 +5,7 @@ header("Access-Control-Allow-Origin: *");
 
 $fp=$_REQUEST['fp'];
 $ip=$_REQUEST['ip'];
+$tt=$_REQUEST['tt'];
 $cookie=$_REQUEST['cookie'];
 $city=$_REQUEST['city'];
 $from=$_SERVER['HTTP_REFERER'];
@@ -14,7 +15,7 @@ $conn=db__connect();
 
 if(isset($_REQUEST['cookie'])){
 	db__delData($conn,"fp_cookie","fp",$fp);
-	db__pushData($conn,"fp_cookie",array("fp" => $fp, "cookie" => $cookie));
+	db__pushData($conn,"fp_cookie",array("fp" => $fp, "timestamp" => $tt, "cookie" => $cookie));
 }else{
 
 
