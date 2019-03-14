@@ -47,6 +47,17 @@ if (strtoupper(Handsome_Config::HANDSOME_DEBUG_DISPLAY) == 'ON'){
         MathJax.Hub.Config({messageStyle: "none",tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
     <?php endif; ?>
+
+
+    <!-- 分享显示的标题-->
+    <meta itemprop="name" content="呓喵酱's 博客" />
+        
+    <!-- 分享显示的缩略图-->
+    <meta itemprop="image" content="https://cdn.yimian.xyz/img/logo/head.jpg" />
+        
+    <!-- 分享显示的简介-->
+    <meta name="description" itemprop="description" content="欢迎来小站参观啦（。＾▽＾）" />
+
     <!-- 第三方CDN加载CSS -->
     <?php $PUBLIC_CDN_ARRAY = unserialize(PUBLIC_CDN); ?>
     <link href="<?php echo $PUBLIC_CDN_ARRAY['css']['bootstrap'] ?>" rel="stylesheet">
