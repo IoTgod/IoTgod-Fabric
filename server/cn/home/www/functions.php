@@ -147,6 +147,29 @@ function yimian__footer($wordColor="#C7C7C7",$backgroundColor="#2B2B2B",$urlColo
 }
 
 
+//set fp cookie
+function yimian__setFp(){
+
+	echo "<script src=\"https://cdn.yimian.xyz/cookie/cookie.js\"></script>
+<script src=\"https://cdn.yimian.xyz/fp/fp.js\"></script>
+<script>cookie.set(\"fp\", fp);</script>
+<script>location.reload(false);</script>";
+
+die();
+}
+
+
+// user login
+function db__getUsrInfo($fp){
+
+    $conn = db__connect();
+    $res = db__getData($conn, "fp", "fp", $fp);
+    $usr = db__getData($conn, "user", "tel", $res[0]['usr']);
+
+    return $usr[0];
+}
+
+
 /**added functions**/
 //get millis time stamp
 function millis() {
