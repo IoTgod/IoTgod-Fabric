@@ -1,10 +1,13 @@
 <?php
 include '../functions.php';
 
+if(!isset($_COOKIE['fp'])) yimian__setFp();
+
 session_start();
 
-if(isset($_REQUEST['from']))
+if(isset($_REQUEST['from'])){
 	$_SESSION['s_from']=$_REQUEST['from'];
+}
 if(isset($_COOKIE['fp']))
 {
 	$res=db__getData(db__connect(),"fp","fp",$_COOKIE['fp']);

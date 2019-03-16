@@ -9,7 +9,7 @@ $ip=$_REQUEST['ip'];
 
 $conn=db__connect();
 
-if(db__rowNum($conn,"user","tel",$tel)) 
+if(db__rowNum($conn,"user","tel",$tel) == 1) 
 {
 	echo json_encode(array(code=>0));
 	

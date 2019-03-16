@@ -10,7 +10,7 @@ $usr = db__getUsrInfo($fp);
 
 if($usr == null){
 
-    echo "<script>window.location.href='https://login.yimian.xyz'</script>";
+    echo "<script>window.location.href='https://login.yimian.xyz?from=https://vpn.yimian.xyz'</script>";
     die();
 }
 
