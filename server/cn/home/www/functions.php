@@ -196,6 +196,12 @@ function db__connect($servername="",$username="",$password="",$dbname="")
 		$username = $GLOBALS['g_db_log_usrName'];
 		$password = $GLOBALS['g_db_log_psswd'];
 		$dbname = $GLOBALS['g_db_log_dbName'];
+	}elseif($servername == "yulu"){
+
+		$servername = $GLOBALS['g_db_serverName'];
+		$username = $GLOBALS['g_db_usrName'];
+		$password = $GLOBALS['g_db_psswd'];
+		$dbname = "yulu";
 	}
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -366,9 +372,10 @@ function db__antisql($str)
 
 
 /*****log******/
-function yimian__log($table, $val, $limit){
+function yimian__log($table, $val, $index = ""){
 
-	db__pushData(db__connect("log"), $table, $val, $limit);
+	if($index != "") db__pushData(db__connect("log"), $table, $val, $index);
+	else db__pushData(db__connect("log"), $table, $val);
 }
 
 
