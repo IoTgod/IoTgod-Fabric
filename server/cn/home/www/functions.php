@@ -421,7 +421,7 @@ function get_from(){
 function get_from_domain(){
 
     	$str = str_replace("http://","",get_from());
-    	$str = str_replace("https://","",get_from());
+    	$str = str_replace("https://","",$str);
 		$strdomain = explode("/",$str);
 		return $strdomain[0];
 }
