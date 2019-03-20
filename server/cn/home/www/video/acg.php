@@ -15,10 +15,10 @@ $class=$_GET['class'];
 
 
 
-$sql = "SELECT * FROM videoIndx where class=$class";
+//$sql = "SELECT * FROM videoIndx where class=$class";
 
 
-$result = $conn->query($sql);
+$result = db__getData($conn, "videoIndx", "class", $class)
 ?>
 
 
@@ -83,9 +83,10 @@ function array_orderby()
                         <p class="lead">Share video with the one you love!</p>
                        
 <?php                      
-if ($result->num_rows > 0) {
+if (count($result) > 0) {
     // 输出数据
-    while($row = $result->fetch_assoc()) {
+    shuffle($result);
+    foreach($result as $row) {
 		echo '<h4><a href="./list.php?idd='.$row['idd']
 		.'">' . $row['series'].'</a></h4><p>'.$row['comment'].'</p><br/>';
 
