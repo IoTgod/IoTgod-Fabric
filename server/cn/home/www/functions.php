@@ -411,6 +411,15 @@ function get_from(){
     elseif($_REQUEST['from']) return $_REQUEST['from'];
 }
 
+function get_from_domain(){
+	
+    	$str = str_replace("http://","",get_from());
+    	$str = str_replace("https://","",get_from());
+		$strdomain = explode("/",$str);
+		return $strdomain[0];
+}
+
+
 /**functions for aplayer**/
 
 //put this function to where you want the aplayer to dispaly
