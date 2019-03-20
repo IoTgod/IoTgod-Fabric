@@ -189,6 +189,14 @@ function db__connect($servername="",$username="",$password="",$dbname="")
 	if($username=="") $username=$GLOBALS['g_db_usrName'];
 	if($password=="") $password=$GLOBALS['g_db_psswd'];
 	if($dbname=="") $dbname=$GLOBALS['g_db_dbName'];
+
+	if($servername == "log"){
+
+		$servername = $GLOBALS['g_db_log_serverName'];
+		$username = $GLOBALS['g_db_log_usrName'];
+		$password = $GLOBALS['g_db_log_psswd'];
+		$dbname = $GLOBALS['g_db_log_dbName'];
+	}
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 

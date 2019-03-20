@@ -1,4 +1,6 @@
 <?php
+include '../../../functions.php';
+
 header('Access-Control-Allow-Origin:*');
 
 $n_chino = 120;
