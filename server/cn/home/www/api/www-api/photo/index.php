@@ -1,4 +1,5 @@
 <?php
+include '../../../functions.php';
 header('Access-Control-Allow-Origin:*');
 
 
@@ -34,6 +35,9 @@ if(!isset($_REQUEST['k'])){
         header("Location: https://yimian-image.obs.myhwclouds.com/photo/tsingzhuTaishan2014/".$id.".jpeg");
     }
 }
+
+
+yimian__log("log_api", array("api" => "photo", "timestamp" => date('Y-m-d H:i:s', time()), "ip" => ip2long(get_ip()), "_from" => get_from(), "content" => $_REQUEST['i']."/".$id));
 
 
 die();

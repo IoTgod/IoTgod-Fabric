@@ -407,9 +407,7 @@ return ($ip);
 /** get from address **/
 function get_from(){
 
-    if($_SERVER['remote_addr']) return $_SERVER['remote_addr'];
-    elseif($_SERVER['HTTP_HOST']) return $_SERVER['HTTP_HOST'];
-    elseif($_SERVER['HTTP_REFERER']) return $_SERVER['HTTP_REFERER'];
+    if($_SERVER['HTTP_REFERER']) return $_SERVER['HTTP_REFERER'];
     elseif($_REQUEST['from']) return $_REQUEST['from'];
 }
 
