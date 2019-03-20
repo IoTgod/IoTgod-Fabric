@@ -366,9 +366,9 @@ function db__antisql($str)
 
 
 /*****log******/
-function yimian__log($table, $val){
+function yimian__log($table, $val, $limit){
 
-	db__pushData(db__connect("log"), $table, $val);
+	db__pushData(db__connect("log"), $table, $val, $limit);
 }
 
 
@@ -412,7 +412,7 @@ function get_from(){
 }
 
 function get_from_domain(){
-	
+
     	$str = str_replace("http://","",get_from());
     	$str = str_replace("https://","",get_from());
 		$strdomain = explode("/",$str);

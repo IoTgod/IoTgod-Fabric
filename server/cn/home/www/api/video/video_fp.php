@@ -17,7 +17,7 @@ else
 db__pushData($conn,"fp",array("fp"=>$fp,"videoseek"=>$seek,"video"=>$id,"ip"=>$ip,"videotime"=>time()),array("fp"=>$fp));
 
 
-db__pushData($conn,"videolog",array("ip"=>$ip,"fp"=>$fp,"seek"=>$seek,"video"=>$id,"time"=>time()),array("fp"=>$fp,"video"=>$id));
+yimian__log("log_video",array("ip"=>ip2long($ip),"fp"=>$fp,"seek"=>$seek,"vid"=>$id,"timestamp"=>date('Y-m-d H:i:s', time())),array("fp"=>$fp,"vid"=>$id));
 
 header('Content-type: text/json');
 
