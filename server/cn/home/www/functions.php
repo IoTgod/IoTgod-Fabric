@@ -365,9 +365,18 @@ function db__antisql($str)
 }
 
 
+/*****log******/
+function yimian__log($table, $val){
+
+	db__pushData(db__connect("log"), $table, $val);
+}
+
+
+
+
 /***tools***/
 //fnct of get usr ip::()::(ip)
-function getip() 
+function get_ip() 
 {
 	if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) 
 	{
@@ -393,6 +402,15 @@ function getip()
 					$ip = "unknown";
 				}
 return ($ip);
+}
+
+/** get from address **/
+function get_from(){
+
+    if($_SERVER['remote_addr']) return $_SERVER['remote_addr'];
+    elseif($_SERVER['HTTP_HOST']) return $_SERVER['HTTP_HOST'];
+    elseif($_SERVER['HTTP_REFERER']) return $_SERVER['HTTP_REFERER'];
+    elseif($_REQUEST['from']) return $_REQUEST['from'];
 }
 
 /**functions for aplayer**/

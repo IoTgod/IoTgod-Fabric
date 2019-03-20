@@ -10,7 +10,6 @@ $n_loli = 120;
 $n_normal = 149;
 $n_star = 10;
 
-
 $r = $_REQUEST['i'];
 
 if(isset($_REQUEST['i'])) $r = $_REQUEST['i'];
@@ -70,6 +69,7 @@ if(!isset($_REQUEST['k'])){
     }
 }
 
+yimian__log("log_api", array("api" => "moe", "timestamp" => date('Y-m-d H:i:s', time()), "ip" => ip2long(get_ip()), "_from" => get_from(), "content" => $r."/".$id));
 
 die();
 
