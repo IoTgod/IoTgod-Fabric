@@ -93,7 +93,7 @@ echo "</script>
 <script src=\"https://cdn.yimian.xyz/cookie/cookie.js\"></script>
 <script src=\"https://pv.sohu.com/cityjson?ie=utf-8\"></script>
 <script type=\"text/javascript\">ip=returnCitySN.cip;ipCity=returnCitySN.cname;</script>
-<script src=\"https://cdn.yimian.xyz/fp/fp.js\"></script>
+<script src=\"https://cdn.yimian.xyz/fp/fp.min.js\"></script>
 <script src=\"https://cdn.yimian.xyz/heartbeat/heartbeat_head.min.js\"></script>
 </head>
 	
