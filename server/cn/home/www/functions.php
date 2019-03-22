@@ -380,6 +380,33 @@ function yimian__log($table, $val, $index = ""){
 
 
 
+/*****curl*****/
+
+function curl__post($url = '', $param) {
+
+    if(empty($url)) {
+        return false;
+    }
+
+    $o = "";
+    foreach ($param as $k => $v) { 
+        $o .= "$k=".urlencode($v)."&" ;
+    }
+
+    $postUrl = $url;
+    $curlPost = substr($o,0,-1);
+    $ch = curl_init();//初始化curl
+    curl_setopt($ch, CURLOPT_URL,$postUrl);//抓取指定网页
+    curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
+    curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+    $data = curl_exec($ch);//运行curl
+    curl_close($ch);
+
+    return $data;
+}
+
 
 /***tools***/
 //fnct of get usr ip::()::(ip)
@@ -425,6 +452,25 @@ function get_from_domain(){
 		$strdomain = explode("/",$str);
 		return $strdomain[0];
 }
+
+
+/*****gugu*****/
+
+function yimian__gugu($body){
+
+	$body = iconv("UTF-8","gbk//TRANSLIT",$body);
+	$url = "http://open.memobird.cn/home/printpaper";
+	return curl__post($url, array("ak" => $GLOBALS['ggj_ak'], "userID" => $GLOBALS['ggj_userID'], "memobirdID" => $GLOBALS['ggj_memobirdID'], "printcontent" => "T:".base64_encode($body)."", "timestamp" => "".time().""));
+}
+
+
+function gugu__send($ak, $userID, $memobirdID, $body){
+
+	$body = iconv("UTF-8","gbk//TRANSLIT",$body);
+	$url = "http://open.memobird.cn/home/printpaper";
+	return curl__post($url, array("ak" => $ak, "userID" => $userID, "memobirdID" => $memobirdID, "printcontent" => "T:".base64_encode($body)."", "timestamp" => "".time().""));
+}
+
 
 
 /** function for mail **/
