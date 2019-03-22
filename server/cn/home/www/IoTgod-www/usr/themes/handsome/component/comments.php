@@ -64,6 +64,10 @@
             <span class="comment-author vcard">
               <b class="fn"><?php echo $author; ?></b><?php echo $Identity; ?>
               </span>
+              <!--浏览器标识-->
+              <span class="comment-ua">
+    <?php getOs($comments->agent); ?>
+    <?php getBrowser($comments->agent); ?></span>
                         <div class="comment-metadata">
                             <time class="format_time text-muted text-xs block m-t-xs" pubdate="pubdate" datetime="<?php $comments->date('c'); ?>"><?php echo Utils::formatDate($comments,$comments->created, $options->dateFormat); ?></time>
                         </div>
