@@ -173,6 +173,9 @@
                     </a>
                   </li>
                   <li>
+                    <a href="https://fp.yimian.xyz" class="auto" target="_blank">fp - 实现跨域不间断</a>
+                  </li>
+                  <li>
                     <a href="https://github.com/iotcat/wIoT" class="auto" target="_blank">wIoT - 物联端管框架</a>
                   </li>
                   <li>
