@@ -36,7 +36,7 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
         <li>state //布尔型，true为发送成功，false为失败</li>
         <hr>
         # 备注 #<br/>
-        更多用法参考<a href="http://www.eee.dog/index.php/archives/192/">https://www.eee.dog/index.php/archives/192/</a><br/>
+        更多用法参考<a href="https://www.eee.dog/tech/mail-api.html">https://www.eee.dog/tech/mail-api.html</a><br/>
         <hr>
         # 示例 #<br/>
         <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/mail/?to=收信邮箱&subject=邮件主题&body=邮件内容&from=发件人名称</a>
