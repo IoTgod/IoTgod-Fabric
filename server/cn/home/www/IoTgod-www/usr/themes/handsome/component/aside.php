@@ -143,6 +143,9 @@
                     <a href="https://ovo.re" class="auto" target="_self">OvO.re</a>
                   </li>
                   <li>
+                    <a href="https://api.yimian.xyz" class="auto" target="_self">API汇集</a>
+                  </li>
+                  <li>
                     <a href="https://mikutap.yimian.xyz" class="auto">Mikutap享受创作之乐</a>
                   </li>
                 </ul>
