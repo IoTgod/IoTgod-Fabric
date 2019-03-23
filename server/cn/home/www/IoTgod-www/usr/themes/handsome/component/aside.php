@@ -28,15 +28,13 @@
                 </span>
               </a>
                 </div>
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
                 <span class="clear">
                   <span class="block m-t-sm">
                     <strong class="font-bold text-lt"><?php $this->options->BlogName(); ?></strong>
-                    <b class="caret"></b>
                   </span>
                   <span class="text-muted text-xs block"><?php $this->options->BlogJob() ?></span>
                 </span>
-              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded" aria-expanded="false"><i class="fontello fontello-rss"></i>RSS<b class="caret"></b></a>
               <!-- dropdown -->
               <ul class="dropdown-menu animated fadeInRight w hidden-folded no-padder">
                 <li class="wrapper b-b m-b-sm bg-info m-n">
@@ -252,6 +250,7 @@ data-placement=\"top\"><a href=\"{url}\" target=\"_blank\"><span>{name}</span></
                 </ul>
               </li>
                 <?php endif; ?>
+              <br/><br/><br/><br/><br/><br/><br/>
             </ul>
           </nav>
           <!-- nav -->
