@@ -697,8 +697,8 @@ WebP
 function showSidebarThumbnail($widget, $index = 0)
 {
 
-    $randomNum = unserialize(SIDEBAR_IMAGE_ARRAY);
-    $random = THEME_URL . 'usr/img/sj2/' . $randomNum[$index] . '.jpg'; // 随机缩略图路径
+    //$randomNum = unserialize(SIDEBAR_IMAGE_ARRAY);
+    $random = /*THEME_URL . */'https://image.yimian.xyz/acg/head/'. /*$randomNum[$index] */mt_rand(1,130). '.png'; // 随机缩略图路径
     //正则匹配 主题目录下的/images/sj2/的图片（以数字按顺序命名）
 
     return $random;
