@@ -9,8 +9,7 @@ $memobirdID = $_REQUEST['memobirdID'];
 
 $res = gugu__send($ak, $userID, $memobirdID, $body);
 
-$data = json_decode($res);
-if(!isset($data['showapi_res_code'])){
+if(strpos($res,'showapi_res_code') === false){
 
     echo json_encode(array("showapi_res_code" => 0, "showapi_res_error" => "ak, 咕咕号或咕咕机编号错误!"));
 }else{
