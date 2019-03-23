@@ -27,7 +27,7 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
         # 请求地址 #<br/>
         <a style="color:#fd4b5c;text-decoration:none;">https://api.yimian.xyz/moe</a><br/>
         # 参数 #<br/>
-        <li>i //type=normal正常/loli萝莉/background背景/PCBackground背景适配电脑/PhoneBackground背景适配手机，留空默认随机输出正常或萝莉</li>
+        <li>i //type=normal正常/loli萝莉/head头像/background背景/PCBackground背景适配电脑/PhoneBackground背景适配手机，留空默认随机输出正常或萝莉</li>
         <li>k //更快速返回图片</li>
         <li>s //通过给这个参数不同的值来返回不同的图片</li>
         <hr>
@@ -43,7 +43,7 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
         <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/moe</a>
         <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/moe?k</a><br/>
         <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/moe?s=1&k</a><br/>
-        <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/moe?i=loli&s=1&k</a>
+        <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/moe?i=head&s=1&k</a>
         </h3>
           </div>
 </div>

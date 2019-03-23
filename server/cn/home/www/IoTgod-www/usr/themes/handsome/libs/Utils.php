@@ -83,10 +83,10 @@ class Utils {
 
     public static function getGravator($email,$host,$size){
         $options = mget();
-        $default = '';
-        if (strlen($options->defaultAvator) > 0){
+        $default = 'https://image.yimian.xyz/acg/head/'.mt_rand(1,130).'.png';
+        /*if (strlen($options->defaultAvator) > 0){
             $default = $options->defaultAvator;
-        }
+        }*/
         $url = '/';//自定义头像目录,一般保持默认即可
         //$size = '40';//自定义头像大小
         $rating = Helper::options()->commentsAvatarRating;

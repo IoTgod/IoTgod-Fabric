@@ -9,6 +9,7 @@ $n_PhoneBackground = 32;
 $n_loli = 120;
 $n_normal = 149;
 $n_star = 10;
+$n_head = 130;
 
 $r = $_REQUEST['i'];
 
@@ -39,6 +40,9 @@ if(!isset($_REQUEST['k'])){
     }elseif($r == "star"){
         $id = mt_rand(1,$n_star);
         echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/star/".$id.".jpg");
+    }elseif($r == "head"){
+        $id = mt_rand(1,$n_head);
+        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/head/".$id.".png");
     }else{
         $id = mt_rand(1,$n_normal);
         echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/dmoe/".$id.".jpg");
@@ -63,6 +67,9 @@ if(!isset($_REQUEST['k'])){
     }elseif($r == "star"){
         $id = mt_rand(1,$n_star);
         header("Location: https://yimian-image.obs.myhwclouds.com/acg/star/".$id.".jpg");
+    }elseif($r == "head"){
+        $id = mt_rand(1,$n_head);
+        header("Location: https://yimian-image.obs.myhwclouds.com/acg/head/".$id.".png");
     }else{
         $id = mt_rand(1,$n_loli);
         header("Location: https://yimian-image.obs.myhwclouds.com/acg/fmoe/".$id.".jpg");
