@@ -48,4 +48,4 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
           </div>
 </div>
 <?php
-yimian__simpleFooter();
+yimian__footer();

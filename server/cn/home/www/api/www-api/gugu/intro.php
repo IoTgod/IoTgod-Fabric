@@ -41,7 +41,7 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
         <li>更多用法见<a href="http://open.memobird.cn/upload/webapi.pdf">官方文件</a></li>
         <hr>
         # 备注 #<br/>
-        次API仅为官方接口的二次封装，意在降低其使用门槛。本站承诺不会保存任何使用者信息。如果您对本站存有疑惑，请慎重使用本接口！！<br/>
+        次API仅为官方接口的二次封装，意在降低其使用门槛。本站承诺不会保存任何使用者信息。如果您对本站存有疑惑，请慎重使用本接口！！<a href="https://github.com/IoTcat/IoTgod-Fabric/blob/master/server/cn/home/www/api/www-api/gugu/index.php">本接口源码</a><br/>
         <hr>
         # 示例 (类似这个格式)#<br/>
         <a style="color:#fd4b5c;text-decoration:none；" target="_blank">https://api.yimian.xyz/gugu?ak=9e55121803474371bfa25d20e554b31d&userID=832598&memobirdID=c3ee06a8bd9b49e1&body=你好呀世界</a>
@@ -49,4 +49,4 @@ h3:hover {box-shadow:0px 0px 8px #D1D1D1;}
           </div>
 </div>
 <?php
-yimian__simpleFooter();
+yimian__footer();
