@@ -16,11 +16,29 @@
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.yimian.xyz/fp/fp.min.js"></script>
     <script>
+
+var ice_hk = 0;
+
+        function on_enter_key(){
+            ice_hotKeys();
+            if (event.keyCode==13){
+                var search_txt = document.getElementById("search-bar-input").value;
+                if (search_txt == "") {
+                    window.open("https://www.google.com");
+                    return;
+                }
+                log_search("google", search_txt);
+                var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
+                window.open(search_url);
+            }
+        }
+
         //LISTEN ENTER KEYDOWN EVENT
         document.onkeydown = function(e){
             if(!e){
                 e = window.event;
             }
+            if(ice_hk) return;
             if((e.keyCode || e.which) == 13){
                 do_google_search();
             }
@@ -91,22 +109,15 @@
             var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
             window.open(search_url);
         }
-		function on_enter_key(){
-			if (event.keyCode==13){
-				var search_txt = document.getElementById("search-bar-input").value;
-				if (search_txt == "") {
-                    window.open("https://www.google.com");
-                    return;
-				}
-                log_search("google", search_txt);
-				var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
-				window.open(search_url);
-			}
-		}
 
         function log_search(type, val){
 
             $.post("https://log.yimian.xyz/log_search.php",{"fp":fp, "type":type, "value":val});
+        }
+
+        function ice_hotKeys(){
+            ice_hk = 1;
+            setTimeout("ice_hk = 0", 3000);
         }
     </script>
 </head>
