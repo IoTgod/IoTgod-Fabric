@@ -24,55 +24,55 @@ if(!isset($_REQUEST['k'])){
 
     if($r == "chino"){
         $id = mt_rand(1,$n_chino);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/cmoe/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/cmoe/".$id.".jpg");
     }elseif($r == "PCBackground"){
         $id = mt_rand(1,$n_PCBackground);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/hbc/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/hbc/".$id.".jpg");
     }elseif($r == "PhoneBackground"){
         $id = mt_rand(1,$n_PhoneBackground);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/sbc/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/sbc/".$id.".jpg");
     }elseif($r == "loli"){
         $id = mt_rand(1,$n_loli);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/fmoe/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/fmoe/".$id.".jpg");
     }elseif($r == "normal"){
         $id = mt_rand(1,$n_normal);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/dmoe/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/dmoe/".$id.".jpg");
     }elseif($r == "star"){
         $id = mt_rand(1,$n_star);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/star/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/star/".$id.".jpg");
     }elseif($r == "head"){
         $id = mt_rand(1,$n_head);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/head/".$id.".png");
+        echo file_get_contents("https://image.yimian.xyz/acg/head/".$id.".png");
     }else{
         $id = mt_rand(1,$n_normal);
-        echo file_get_contents("https://yimian-image.obs.myhwclouds.com/acg/dmoe/".$id.".jpg");
+        echo file_get_contents("https://image.yimian.xyz/acg/dmoe/".$id.".jpg");
     }
 }else{
 
     if($r == "chino"){
         $id = mt_rand(1,$n_chino);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/cmoe/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/cmoe/".$id.".jpg");
     }elseif($r == "PCBackground"){
         $id = mt_rand(1,$n_PCBackground);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/hbc/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/hbc/".$id.".jpg");
     }elseif($r == "PhoneBackground"){
         $id = mt_rand(1,$n_PhoneBackground);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/sbc/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/sbc/".$id.".jpg");
     }elseif($r == "loli"){
         $id = mt_rand(1,$n_loli);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/fmoe/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/fmoe/".$id.".jpg");
     }elseif($r == "normal"){
         $id = mt_rand(1,$n_normal);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/dmoe/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/dmoe/".$id.".jpg");
     }elseif($r == "star"){
         $id = mt_rand(1,$n_star);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/star/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/star/".$id.".jpg");
     }elseif($r == "head"){
         $id = mt_rand(1,$n_head);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/head/".$id.".png");
+        header("Location: https://image.yimian.xyz/acg/head/".$id.".png");
     }else{
         $id = mt_rand(1,$n_loli);
-        header("Location: https://yimian-image.obs.myhwclouds.com/acg/fmoe/".$id.".jpg");
+        header("Location: https://image.yimian.xyz/acg/fmoe/".$id.".jpg");
     }
 }
 
