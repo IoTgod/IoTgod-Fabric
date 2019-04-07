@@ -28,8 +28,12 @@ var ice_hk = 0;
                     return;
                 }
                 log_search("google", search_txt);
-                var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
-                window.open(search_url);
+                if(search_txt.substr(0,2) == "//"){
+                    window.open("https:"+search_txt);
+                }else{
+                    var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
+                    window.open(search_url);
+                }
             }
         }
 
@@ -96,8 +100,12 @@ var ice_hk = 0;
                 return;
             }
             log_search("baidu", search_txt);
-            var search_url = "https://www.baidu.com/s?wd=" + encodeURI(search_txt);
-            window.open(search_url);
+            if(search_txt.substr(0,2) == "//"){
+                window.open("https:"+search_txt);
+            }else{
+                var search_url = "https://www.baidu.com/s?wd=" + encodeURI(search_txt);
+                window.open(search_url);
+            }
         }
         function do_google_search() {
             var search_txt = document.getElementById("search-bar-input").value;
@@ -106,8 +114,12 @@ var ice_hk = 0;
                 return;
             }
             log_search("google", search_txt);
-            var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
-            window.open(search_url);
+            if(search_txt.substr(0,2) == "//"){
+                window.open("https:"+search_txt);
+            }else{
+                var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
+                window.open(search_url);
+            }
         }
 
         function log_search(type, val){
