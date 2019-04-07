@@ -13,6 +13,8 @@
     </style>
     <link rel="stylesheet" href="./css/Index.css">
 	<link rel="shortcut icon" href="https://cdn.yimian.xyz/img/logo/logo.ico"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.yimian.xyz/fp/fp.min.js"></script>
     <script>
         //LISTEN ENTER KEYDOWN EVENT
         document.onkeydown = function(e){
@@ -20,7 +22,51 @@
                 e = window.event;
             }
             if((e.keyCode || e.which) == 13){
-                do_search();
+                do_google_search();
+            }
+
+            if((e.keyCode || e.which) == 87){
+                window.open("https://wx.qq.com/");
+            }
+
+            if((e.keyCode || e.which) == 71){
+                window.open("https://github.com/IoTcat");
+            }
+
+            if((e.keyCode || e.which) == 73){
+                window.open("https://www.eee.dog");
+            }
+
+            if((e.keyCode || e.which) == 17){
+                window.open("https://pre.eee.dog");
+            }
+
+            if((e.keyCode || e.which) == 69){
+                window.open("https://ice.xjtlu.edu.cn/");
+            }
+
+            if((e.keyCode || e.which) == 16){
+                window.open("https://ebridge.xjtlu.edu.cn/urd/sits.urd/run/SIW_LGN");
+            }
+
+            if((e.keyCode || e.which) == 66){
+                window.open("https://www.bilibili.com/");
+            }
+
+            if((e.keyCode || e.which) == 86){
+                window.open("https://my.vultr.com/");
+            }
+
+            if((e.keyCode || e.which) == 84){
+                window.open("https://console.cloud.tencent.com/");
+            }
+
+            if((e.keyCode || e.which) == 72){
+                window.open("https://console.huaweicloud.com/console/");
+            }
+
+            if((e.keyCode || e.which) == 65){
+                window.open("https://home.console.aliyun.com/");
             }
         }
 
@@ -31,6 +77,7 @@
                 window.open("https://www.baidu.com");
                 return;
             }
+            log_search("baidu", search_txt);
             var search_url = "https://www.baidu.com/s?wd=" + encodeURI(search_txt);
             window.open(search_url);
         }
@@ -40,6 +87,7 @@
                 window.open("https://www.google.com");
                 return;
             }
+            log_search("google", search_txt);
             var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
             window.open(search_url);
         }
@@ -50,10 +98,16 @@
                     window.open("https://www.google.com");
                     return;
 				}
+                log_search("google", search_txt);
 				var search_url = "https://www.google.com/search?newwindow=1&hl=zh-CN&q=" + encodeURI(search_txt);
 				window.open(search_url);
 			}
 		}
+
+        function log_search(type, val){
+
+            $.post("https://log.yimian.xyz/log_search.php",{"fp":fp, "type":type, "value":val});
+        }
     </script>
 </head>
 <body>
