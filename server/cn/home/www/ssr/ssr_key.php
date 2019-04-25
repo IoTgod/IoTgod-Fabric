@@ -16,8 +16,8 @@ $passwd=$row[0]['passwd'];
 
 $str=base64_encode("aes-256-cfb:$passwd@usa.ssr.yimian.xyz:$port")."
 ss://".base64_encode("aes-256-cfb:$passwd@aus.ssr.yimian.xyz:$port")."
-ss://".base64_encode("aes-256-cfb:$passwd@ssr.yimian.xyz:$port").
-"ss://".base64_encode("aes-256-cfb:$passwd@pixiv.ssr.yimian.xyz:$port");;
+ss://".base64_encode("aes-256-cfb:$passwd@ssr.yimian.xyz:$port")."
+ss://".base64_encode("aes-256-cfb:$passwd@pixiv.ssr.yimian.xyz:$port");
 
 $str1=base64_encode("aes-256-cfb:$passwd@usa.ssr.yimian.xyz:$port");
 $str2=base64_encode("aes-256-cfb:$passwd@aus.ssr.yimian.xyz:$port");
