@@ -7,7 +7,7 @@ $version = $_REQUEST['version'];
 $mac = $_REQUEST['MAC'];
 
 if(isset($version)){
-    if($version != "v0.1.4")
+    if($version != "v0.1.5")
         echo json_encode(array("update" => 1));
     else
         echo json_encode(array('update' => 0));
